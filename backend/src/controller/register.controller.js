@@ -1,8 +1,11 @@
-const register = async (_req, res) => {
+const  createService  = require("../service/register.service");
 
-	return res.status(200).json({ message: 'cade meu token?' });
+const create = async (req, res) => {
+	const created = await createService.create(req.body)
+
+
+
+	return res.status(200).json(created);
 }
 
-module.exports = {
-	register
-}
+module.exports = { create };
