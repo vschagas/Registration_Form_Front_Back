@@ -14,7 +14,7 @@ body {
   color: var(--font-color);
   display: grid;
   font-family: var(font-family);
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   height: 100vh;
   justify-items: center;
@@ -127,38 +127,23 @@ body {
       } */
 }
   
-    .pets-weight .radio-container {
+    /* .pets-weight .radio-container {
       display: flex;
       justify-content: space-between;
       width: 100%;
-    }
-  
-    footer {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      background: #fff;
-      display: grid;
-      padding: 0px 30px;
-      height: 80px;
-      width: 500px;
-      position: absolute;
-      bottom: 0;
-
-  
-      /* & button {
-        
-      }
-  
-      & #back {
-        background: #fff;
-        transition: .2s all ease-in-out;
-        
-        &:hover {
-          
-        }
-      }
     } */
+  
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #fff;
+  display: grid;
+  padding: 0px 30px;
+  height: 80px;
+  width: 500px;
+  position: absolute;
+  bottom: 0;
 }
 
 .send-button {
