@@ -51,7 +51,11 @@ export const Register = () => {
             
           </label>
         </form>
+      <footer>
+        <button type="button" className='send-button'>Send</button>
+      </footer>
       </section>
+      
     </div>
   )
 }
