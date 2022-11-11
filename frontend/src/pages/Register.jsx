@@ -5,15 +5,18 @@ export const Register = () => {
   return (
     <div className='signup-container'>
       <section className='left-container'>
-        <h1>< FaPaw /> PUPASSURE</h1>
+        <div className='header-container'>
+          <h1 className='icon'>< FaPaw /></h1>
+          <h1>PET'S SURE</h1>
+        </div>
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-542207-jpeg.png" alt="pet" />
       </section>
 
       <section className='right-container'>
-        <h1>
+        <h1 className='form-text-header'>
           Yay, puppies! Ensure your pup gets the best care!
         </h1>
-
+        
         <form>
           <label> Name
             <input

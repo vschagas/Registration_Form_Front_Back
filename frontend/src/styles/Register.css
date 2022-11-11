@@ -35,59 +35,52 @@ body {
   position: relative;
   text-align: center;
   width: 300px;
-  
-  h1 {
-    color: $font-color;
-    display: inline-block;
-    font-size: 24px;
-  }
-        /* & i {
-            background: $primary-bg-color;
-            border-radius: 50%;
-            color: $secondary-bg-color;
-            font-size: 24px;
-            margin-right: 5px;
-            padding: 10px;
-            transform: rotate(-45deg);
-        } */
 }
-  
-    /* .puppy {
-        bottom: -5px;
-        position: absolute;
-        text-align: center;
-      
-        &:before {
-            background: $secondary-bg-color;
-            content: "";
-            height: 100%;
-            left: 0;
-            opacity: .4;
-            position: absolute;
-            width: 100%;
-            z-index: 1;
-        }
-    }
-  
-    img {
-        filter: sepia(100%);
-        width: 70%;
-    }
-} */
 
-/* .right-container {
-    background: lighten($primary-bg-color, 5%);
-    display: grid;
-    grid-template-areas: "." ".";
-    width: 500px;
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-left: 50px;
+  color: var(--font-color);
+  font-family: var(--font-family);
+  font-size: 20px;
+
   
-    & h1:nth-of-type(1) {
-        color: $font-color;
-        font-size: 28px;
-        font-weight: 600;
-    }
+}
+
+.icon {
+  /* border: 1px solid red; */
+  background: var(--primary-bg-color);
+  border-radius: 50%;
+  color: var(--secondary-bg-color);
+  font-size: 30px;
+  margin-right: 15px;
+  padding: 10px;
+  transform: rotate(-45deg);
+}
+
+.form-text-header {
+  display: flex;
+  word-wrap: break-word;
+  font-family: var(--font-family);
+}
+
+
+.right-container {
+  background: lighten(--primary-bg-color, 5%);
+  display: grid;
+  grid-template-areas: "." ".";
+  width: 500px;
   
-    & .set {
+    /* & h1:nth-of-type(1) {
+      color: $font-color;
+      font-size: 28px;
+      font-weight: 600;
+    } */
+  
+    /* & .set {
         display: flex;
         justify-content: space-between;
         margin: 10px 0;
@@ -130,8 +123,8 @@ body {
       & button i {
           color: $font-color;
           font-size: 16px;
-      }
-    } */
+      } */
+}
   
     /* .pets-weight .radio-container {
       display: flex;
