@@ -73,7 +73,7 @@ body {
   background: lighten(--primary-bg-color, 5%);
   display: grid;
   grid-template-areas: "." ".";
-  width: 500px;
+  width: 700px;
   
     /* & h1:nth-of-type(1) {
       color: $font-color;
@@ -141,7 +141,7 @@ footer {
   display: grid;
   padding: 0px 30px;
   height: 80px;
-  width: 500px;
+  width: 598px;
   position: absolute;
   bottom: 0;
 }
