@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   align-items: center;
   background: #D8AA96;
@@ -46,9 +47,7 @@ body {
   border-left: 50px;
   color: var(--font-color);
   font-family: var(--font-family);
-  font-size: 20px;
-
-  
+  font-size: 20px;  
 }
 
 .icon {
@@ -126,6 +125,12 @@ body {
           font-size: 16px;
       } */
 }
+
+/* .right-container :nth-of-type(1) {  // ADICIONADO PRA TESTE
+  color: var(--font-color);
+  font-size: 28px;
+  font-weight: 600;
+} */
   
     /* .pets-weight .radio-container {
       display: flex;
