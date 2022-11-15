@@ -20,22 +20,25 @@ export const Register = () => {
         
         <form>
           <div className='name-div'>
-            {/* <label> Name</label> */}
-            <span>Name</span>
-            <input
-              placeholder='Pets name'
-              type="text"
-              // value={}
-              onChange={ () => {}}
-              />
-            <label> < FaCameraRetro />
+            <div className='pet-name-div'>
+              <span>Name</span>
               <input
-              placeholder='Insert some url'
-              type="text"
-              // value={}
-              onChange={ () => {}}
-              />
-            </label>
+                placeholder='Pets name'
+                type="text"
+                // value={}
+                onChange={ () => {}}
+                />
+              </div>
+              <div className='photo-div'>
+                <span className='span-icon'>< FaCameraRetro /></span>
+                <input
+                placeholder='Insert some url'
+                type="text"
+                // value={}
+                onChange={ () => {}}
+                />
+              </div>
+      
 
           </div>
           
