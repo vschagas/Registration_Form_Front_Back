@@ -160,35 +160,35 @@ form {
 }
 
 .name-div {
-  /* height: 80px; */
+  height: 70px;
   color: var(--font-color);
   font-size: 20px;
   /* font-weight: 600; */
   display: flex;
   justify-content: space-between;
   /* margin: 10px 0; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   font-family: var(--font-family);
 }
 
 .pet-name-div {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 45%;
+  width: 50%;
 }
 
 .photo-div {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   align-items:flex-end;
   justify-content: space-evenly;
-  width: 55%;
+  width: 50%;
 }
 
 .span-icon {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -203,6 +203,35 @@ form {
   height: 38px;
 }
 
+.breed-div {
+  /* border: 1px solid red; */
+  display: flex;
+  height: 70px;
+  font-family: var(--font-family);
+
+}
+
+.pet-breed-div {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.birth-div {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+
+}
+.input {
+  /* background-color: #171A2B; */
+  width: 200px;
+}
+
 input {
   border: 1px solid var(--form-border-color);
   color: var(--font-color);
@@ -211,6 +240,7 @@ input {
   height: 38px;
   line-height: 38px;
   padding-left: 5px;
+  
 }
   
 footer {

@@ -22,45 +22,31 @@ export const Register = () => {
           <div className='name-div'>
             <div className='pet-name-div'>
               <span>Name</span>
-              <input
-                placeholder='Pets name'
-                type="text"
-                // value={}
-                onChange={ () => {}}
-                />
-              </div>
-              <div className='photo-div'>
-                <span className='span-icon'>< FaCameraRetro /></span>
-                <input
-                placeholder='Insert some url'
-                type="text"
-                // value={}
-                onChange={ () => {}}
-                />
-              </div>
-      
-
+              <input className='input' placeholder='Pets name' type="text" onChange={ () => {}}/>
+            </div>
+            <div className='photo-div'>
+              <span className='span-icon'>< FaCameraRetro /></span>
+              <input placeholder='Insert some url' type="text" onChange={ () => {}}/>
+            </div>
           </div>
           
-          <div>
-          <label> Breed
+          <div className='breed-div'>
+            <div className='pet-breed-div'>
+              <span>Breed</span>
+              <input className='input' placeholder='Pets breed' type="text" onChange={ () => {}}/>
+            </div>
+            <div className='birth-div'>
+              <span>Birthday</span>
             <input
-            placeholder='Pets breed'
-            type="text"
-            // value={}
-            onChange={ () => {}}
-            />
-          </label>
-
-          <label> Birthday
-            <input
+            className='input'
             placeholder='MM/DD/YYYY'
             type="date"
             // value={}
             onChange={ () => {}}
             />
-          </label>
+            </div>
           </div>
+
           <div>
           <label htmlFor='gender'> Gender
             <input
