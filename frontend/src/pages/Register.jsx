@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaPaw } from 'react-icons/fa';
+import { FaPaw, FaCameraRetro } from 'react-icons/fa';
 
 export const Register = () => {
   return (
@@ -20,14 +20,15 @@ export const Register = () => {
         
         <form>
           <div className='name-div'>
-            <label> Name</label>
+            {/* <label> Name</label> */}
+            <span>Name</span>
             <input
               placeholder='Pets name'
               type="text"
               // value={}
               onChange={ () => {}}
               />
-            <label> Photo
+            <label> < FaCameraRetro />
               <input
               placeholder='Insert some url'
               type="text"
