@@ -69,10 +69,11 @@ body {
 
 
 .right-container {
+  border: 2px solid red;
   background: lighten(--primary-bg-color, 5%);
-  display: grid;
-  grid-template-areas: "." ".";
-  width: 700px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   
     /* & h1:nth-of-type(1) {
       color: $font-color;
@@ -137,16 +138,36 @@ body {
       justify-content: space-between;
       width: 100%;
     } */
+
+form {
+  border:1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+}
+
+.form-container {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  height: 70%;
+}
+
+.name-div {
+  border: 1px solid red;
+}
   
 footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background: #fff;
-  display: grid;
   padding: 0px 30px;
   height: 80px;
-  width: 598px;
+  width: 50%;
   position: absolute;
   bottom: 0;
 }
