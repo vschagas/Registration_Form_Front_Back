@@ -1,32 +1,40 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import { FaPaw, FaCameraRetro } from 'react-icons/fa';
 
 export const Register = () => {
   const [petName, setPetName] = useState('');
   const [petPhoto, setPetPhoto] = useState('');
-  const [petBreed, setPetBreed] =useState('');
+  const [petBreed, setPetBreed] = useState('');
+  const [petBirth, setPetBirth] = useState('');
+  const [petGender, setPetGender] = useState('');
+  const [petSpayed, setPetSpayed] = useState('');
+  const [petWeigth, setPetWeigth] = useState('');
 
 
   async function handleData(e) {
 
-    console.log(petName);
-    console.log('entrei');
+		const response = await axios
+			.post('http://localhost:3001/project',
+				{
+					name: petName,
+					image: petPhoto,
+					breed: petBreed,
+					birthday: petBirth,
+          gender: petGender,
+          Spayed: petSpayed,
+          weigth: petWeigth
 
-		// const response = await axios
-		// 	.post('http://localhost:3001/project',
-		// 		{
-		// 			name: projectName,
-		// 			description: projectDesc,
-		// 			requirements: projectReq,
-		// 			id_module: projectModule
-		// 		}, // body
-		// 		{
-		// 			headers: {
-		// 				'Content-Type': 'application/json',
-		// 				authorization: 'nknag5oilfk'
-		// 			}
-		// 		}
-		// 	);
+				}, // body
+				// {
+				// 	headers: {
+				// 		'Content-Type': 'application/json',
+				// 		authorization: 'nknag5oilfk'
+				// 	}
+				// }
+			);
+
+      console.log(response);
 
 		// setResponse(response.data.id);
 		// alert(`Projeto ${response.data.id} registrado com sucesso!}`)
@@ -81,8 +89,9 @@ export const Register = () => {
               <span>Birthday</span>
             <input
             className='input'
+            value={petBirth}
             type="date"
-            onChange={ () => {}}
+            onChange={ (e) => setPetBirth(e.target.value)}
             />
             </div>
           </div>
@@ -92,10 +101,10 @@ export const Register = () => {
               <span>Gender</span>
               <div className='radio-gender-container'>
                 <label htmlFor='female' className='input-gender'>Female
-                <input id='female' type="radio" name='gender' onChange={ () => {}}/>
+                <input id='female' type="radio" name='gender' onChange={ (e) => setPetGender(e.target.id)}/>
                 </label>
                 <label htmlFor='male' className='input-gender'>Male
-                <input id='male' type="radio" name='gender' />
+                <input id='male' type="radio" name='gender' onChange={ (e) => setPetGender(e.target.id)} />
                 </label>
                 
               </div>
@@ -103,18 +112,18 @@ export const Register = () => {
             <div>
               <span>Spayed or Neutered</span>
               <label htmlFor='spayed'>
-              <input type="radio" name='spayed' onChange={ () => {}}/>
-              <input type="radio" name='spayed' />
+              <input type="radio" name='spayed' id='spayed' onChange={ (e) => setPetSpayed(e.target.id)}/>
+              <input type="radio" name='spayed' id='neutered' onChange={ (e) => setPetSpayed(e.target.id)} />
               </label>
             </div>
           </div>
 
           <div>
             <span>Weigth</span>
-            <input type="radio" name='weigth' onChange={ () => {}}/>
-            <input type="radio" name='weigth' />
-            <input type="radio" name='weigth' onChange={ () => {}}/>
-            <input type="radio" name='weigth' />
+            <input type="radio" name='weigth' id='0-25 lbs' onChange={ (e) => setPetWeigth(e.target.id)}/>
+            <input type="radio" name='weigth' id='25-50 lbs' onChange={ (e) => setPetWeigth(e.target.id)}/>
+            <input type="radio" name='weigth' id='50-100 lbs' onChange={ (e) => setPetWeigth(e.target.id)}/>
+            <input type="radio" name='weigth' id='100+ lbs' onChange={ (e) => setPetWeigth(e.target.id)}/>
           </div>
         </form>
         </div>
