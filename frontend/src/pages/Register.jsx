@@ -1,8 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaPaw, FaCameraRetro } from 'react-icons/fa';
 
 export const Register = () => {
+  const [petName, setPetName] = useState('');
+  const [petPhoto, setPetPhoto] = useState('');
+  const [petBreed, setPetBreed] =useState('');
+
+
+  async function handleData(e) {
+
+    console.log(petName);
+    console.log('entrei');
+
+		// const response = await axios
+		// 	.post('http://localhost:3001/project',
+		// 		{
+		// 			name: projectName,
+		// 			description: projectDesc,
+		// 			requirements: projectReq,
+		// 			id_module: projectModule
+		// 		}, // body
+		// 		{
+		// 			headers: {
+		// 				'Content-Type': 'application/json',
+		// 				authorization: 'nknag5oilfk'
+		// 			}
+		// 		}
+		// 	);
+
+		// setResponse(response.data.id);
+		// alert(`Projeto ${response.data.id} registrado com sucesso!}`)
+	}
+
+
   return (
+
     <div className='signup-container'>
       <section className='left-container'>
         <div className='header-container'>
@@ -22,70 +54,73 @@ export const Register = () => {
           <div className='name-div'>
             <div className='pet-name-div'>
               <span>Name</span>
-              <input className='input' placeholder='Pets name' type="text" onChange={ () => {}}/>
+              <input className='input'
+               placeholder='Pets name'
+               value={petName}
+               type="text"
+               onChange={(e)=> setPetName(e.target.value)}/>
             </div>
             <div className='photo-div'>
               <span className='span-icon'>< FaCameraRetro /></span>
-              <input placeholder='Insert some url' type="text" onChange={ () => {}}/>
+              <input placeholder='Insert some url'
+                value={petPhoto}
+               type="text"
+               onChange={(e)=> setPetPhoto(e.target.value)}/>
             </div>
           </div>
           
           <div className='breed-div'>
             <div className='pet-breed-div'>
               <span>Breed</span>
-              <input className='input' placeholder='Pets breed' type="text" onChange={ () => {}}/>
+              <input className='input' placeholder='Pets breed'
+                value={petBreed}
+               type="text"
+               onChange={ (e) => setPetBreed(e.target.value)}/>
             </div>
             <div className='birth-div'>
               <span>Birthday</span>
             <input
             className='input'
-            placeholder='MM/DD/YYYY'
             type="date"
-            // value={}
             onChange={ () => {}}
             />
             </div>
           </div>
 
-          <div>
-          <label htmlFor='gender'> Gender
-            <input
-            id='gender'
-            type="radio"
-            name='male'
-            value="male"
-            // onChange={ () => {}}
-            />
-            <input id='gender' type="radio" />
-          </label>
-          <label htmlFor='gender'> Spayed or Neutered
-            <input type="radio" name="" id="" />
-          </label>
+          <div className='gender-div'>
+            <div className='pet-gender-div'>
+              <span>Gender</span>
+              <div className='radio-gender-container'>
+                <label htmlFor='female' className='input-gender'>Female
+                <input id='female' type="radio" name='gender' onChange={ () => {}}/>
+                </label>
+                <label htmlFor='male' className='input-gender'>Male
+                <input id='male' type="radio" name='gender' />
+                </label>
+                
+              </div>
+            </div>
+            <div>
+              <span>Spayed or Neutered</span>
+              <label htmlFor='spayed'>
+              <input type="radio" name='spayed' onChange={ () => {}}/>
+              <input type="radio" name='spayed' />
+              </label>
+            </div>
           </div>
 
           <div>
-          <label htmlFor='weight'> Weight
-            <input
-            id='weight'
-            type="radio"
-            name='male'
-            value="male"
-            // onChange={ () => {}}
-            />
-            <input
-            id='gender'
-            type="radio"
-            />
-            
-          </label>
+            <span>Weigth</span>
+            <input type="radio" name='weigth' onChange={ () => {}}/>
+            <input type="radio" name='weigth' />
+            <input type="radio" name='weigth' onChange={ () => {}}/>
+            <input type="radio" name='weigth' />
           </div>
-
-          
         </form>
         </div>
         
         <footer>
-          <button type="button" className='send-button'>Send</button>
+          <button type="button" className='send-button' onClick={ handleData}>Send</button>
         </footer>
       </section>
       

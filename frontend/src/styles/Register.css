@@ -227,6 +227,41 @@ form {
   width: 50%;
 
 }
+
+.gender-div {
+  border: 1px solid red;
+  display: flex;
+}
+
+.pet-gender-div {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  width: 50%;
+}
+
+.radio-gender-container {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  background: #fff;
+  /* border: 1px solid var(--form-border-color); */
+  border-radius: 4px;
+  /* display: inline-block; */
+  padding: 0px 5px;
+
+  
+}
+
+.input-gender {
+  border: 1px solid black;
+  width: 50%;
+  height: 80%;
+}
+
 .input {
   /* background-color: #171A2B; */
   width: 200px;
