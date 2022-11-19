@@ -14,6 +14,5 @@ app.use(express.json());
 
 app.use('/register', routerRegister);
 
-
 // app.use(errorMiddleware); // tem de ser o último
 module.exports = app;
