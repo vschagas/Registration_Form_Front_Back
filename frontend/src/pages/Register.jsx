@@ -42,7 +42,6 @@ export const Register = () => {
 
 
   return (
-
     <div className='signup-container'>
       <section className='left-container'>
         <div className='header-container'>
@@ -52,86 +51,73 @@ export const Register = () => {
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-542207-jpeg.png" alt="pet" />
       </section>
 
-      <section className='right-container'>
-        <div className='form-container'>
-        <h1 className='form-text-header'>
-          Yay, puppies! Ensure your pup gets the best care!
-        </h1>
-        
-        <form>
-          <div className='name-div'>
-            <div className='pet-name-div'>
-              <span>Name</span>
-              <input className='input'
-               placeholder='Pets name'
-               value={petName}
-               type="text"
-               onChange={(e)=> setPetName(e.target.value)}/>
-            </div>
-            <div className='photo-div'>
-              <span className='span-icon'>< FaCameraRetro /></span>
-              <input placeholder='Insert some url'
-                value={petPhoto}
-               type="text"
-               onChange={(e)=> setPetPhoto(e.target.value)}/>
-            </div>
+      <div className='right-container'>
+        <header>
+          <h1>Yay, puppies! Ensure your pup gets the best care!</h1>
+        </header>
+        <div className='set'>
+          <div className='pets-name'>
+            <label for='pets-name'>Name</label>
+            <input id='pets-name' placeholder="Pet's name" type='text'/>
           </div>
-          
-          <div className='breed-div'>
-            <div className='pet-breed-div'>
-              <span>Breed</span>
-              <input className='input' placeholder='Pets breed'
-                value={petBreed}
-               type="text"
-               onChange={ (e) => setPetBreed(e.target.value)}/>
-            </div>
-            <div className='birth-div'>
-              <span>Birthday</span>
-            <input
-            className='input'
-            value={petBirth}
-            type="date"
-            onChange={ (e) => setPetBirth(e.target.value)}
-            />
-            </div>
+          <div className='pets-photo'>
+            <button id='pets-upload'>
+              <i className='fas fa-camera-retro'><FaCameraRetro/></i>
+            </button>
+            <label for='pets-upload'>Upload a photo</label>
           </div>
-
-          <div className='gender-div'>
-            <div className='pet-gender-div'>
-              <span>Gender</span>
-              <div className='radio-gender-container'>
-                <label htmlFor='female' className='input-gender'>Female
-                <input id='female' type="radio" name='gender' onChange={ (e) => setPetGender(e.target.id)}/>
-                </label>
-                <label htmlFor='male' className='input-gender'>Male
-                <input id='male' type="radio" name='gender' onChange={ (e) => setPetGender(e.target.id)} />
-                </label>
-                
-              </div>
-            </div>
-            <div>
-              <span>Spayed or Neutered</span>
-              <label htmlFor='spayed'>
-              <input type="radio" name='spayed' id='spayed' onChange={ (e) => setPetSpayed(e.target.id)}/>
-              <input type="radio" name='spayed' id='neutered' onChange={ (e) => setPetSpayed(e.target.id)} />
-              </label>
-            </div>
-          </div>
-
-          <div>
-            <span>Weigth</span>
-            <input type="radio" name='weigth' id='0-25 lbs' onChange={ (e) => setPetWeigth(e.target.id)}/>
-            <input type="radio" name='weigth' id='25-50 lbs' onChange={ (e) => setPetWeigth(e.target.id)}/>
-            <input type="radio" name='weigth' id='50-100 lbs' onChange={ (e) => setPetWeigth(e.target.id)}/>
-            <input type="radio" name='weigth' id='100+ lbs' onChange={ (e) => setPetWeigth(e.target.id)}/>
-          </div>
-        </form>
         </div>
-        
+        <div className='set'>
+          <div className='pets-breed'>
+            <label for='pets-breed'>Breed</label>
+            <input id='pets-breed' placeholder="Pet's breed" type='text'/>
+          </div>
+          <div className='pets-birthday'>
+            <label for='pets-birthday'>Birthday</label>
+            <input id='pets-birthday' placeholder='MM/DD/YYYY' type='text'/>
+          </div>
+        </div>
+        <div className='set'>
+          <div className='pets-gender'>
+            <label for='pet-gender-female'>Gender</label>
+            <div className='radio-container'>
+              <input checked='' id='pet-gender-female' name='pet-gender' type='radio' value='female'/>
+              <label for='pet-gender-female'>Female</label>
+              <input id='pet-gender-male' name='pet-gender' type='radio' value='male'/>
+              <label for='pet-gender-male'>Male</label>
+            </div>
+          </div>
+          <div className='pets-spayed-neutered'>
+            <label for='pet-spayed'>Spayed or Neutered</label>
+            <div className='radio-container'>
+              <input checked='' id='pet-spayed' name='spayed-neutered' type='radio' value='spayed'/>
+              <label for='pet-spayed'>Spayed</label>
+              <input id='pet-neutered' name='spayed-neutered' type='radio' value='neutered'/>
+              <label for='pet-neutered'>Neutered</label>
+            </div>
+          </div>
+        </div>
+          <div className='pets-weight'>
+            <label for='pet-weight-0-25'>Weight</label>
+            <div className='radio-container'>
+              <input checked='' id='pet-weight-0-25' name='pet-weight' type='radio' value='0-25'/>
+              <label for='pet-weight-0-25'>0-25 lbs</label>
+              <input id='pet-weight-25-50' name='pet-weight' type='radio' value='25-50'/>
+              <label for='pet-weight-25-50'>25-50 lbs</label>
+              <input id='pet-weight-50-100' name='pet-weight' type='radio' value='50-100'/>
+              <label for='pet-weight-50-100'>50-100 lbs</label>
+              <input id='pet-weight-100-plus' name='pet-weight' type='radio' value='100+'/>
+              <label for='pet-weight-100-plus'>100+ lbs</label>
+            </div>
+          </div>
+
         <footer>
-          <button type="button" className='send-button' onClick={ handleData}>Send</button>
+          <div className='container-button'>
+            <button id='back'>Back</button>
+            <button id='next'>Next</button>
+          </div>
         </footer>
-      </section>
+      </div>
       
     </div>
   )

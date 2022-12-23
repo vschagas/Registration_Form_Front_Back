@@ -14,19 +14,19 @@ body {
   background: #D8AA96;
   color: var(--font-color);
   display: grid;
-  font-family: var(font-family);
-  font-size: 20px;
+  font-family: var(--font-family);
+  /* font-size: 14px; */
   font-weight: 400;
   height: 100vh;
   justify-items: center;
-  /* weight: 100vw; */
+  font-weight: 100vw;
 }
 
 .signup-container {
   display: grid;
   grid-template-areas: "left right";
   max-width: 900px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100vh;
 }
 
@@ -61,281 +61,159 @@ body {
   transform: rotate(-45deg);
 }
 
-.form-text-header {
+/* .form-text-header {
   display: flex;
   word-wrap: break-word;
   font-family: var(--font-family);
-}
-
+} */
 
 .right-container {
-  border: 2px solid red;
-  background: lighten(--primary-bg-color, 5%);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  
-    /* & h1:nth-of-type(1) {
-      color: $font-color;
-      font-size: 28px;
-      font-weight: 600;
-    } */
-  
-    /* & .set {
-        display: flex;
-        justify-content: space-between;
-        margin: 10px 0;
-    }
-  
-    & input {
-      border: 1px solid $form-border-color;
-      border-radius: 4px;
-      height: 38px;
-      line-height: 38px;
-      padding-left: 5px;
-    }
-  
-    & input, label {
-        color: $font-color;
-    }
-  
-    & header {
-        padding: 40px;
-    }
-  
-    & label, input, .pets-photo {
-      width: 176px;
-    }
-  
-    & .pets-photo {
-      align-items: center;
-      display: grid;
-      grid-template-areas: ". .";
-      
-      & button {
-          border: none;
-          border-radius: 50%;
-          height: 38px;
-          margin-right: 10px;
-          outline: none;
-          width: 38px;
-      }
-      
-      & button i {
-          color: $font-color;
-          font-size: 16px;
-      } */
+  background: #f9c7c2;
+  display: grid;
+  grid-template-areas: "." ".";
+  justify-items: center;
+  /* border: 1px solid red; */
+  width: 500px;
 }
-
-/* .right-container :nth-of-type(1) {  // ADICIONADO PRA TESTE
-  color: var(--font-color);
-  font-size: 28px;
+.right-container h1:nth-of-type(1) {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 30px;
   font-weight: 600;
-} */
-  
-    /* .pets-weight .radio-container {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    } */
-
-form {
-  border:1px solid red;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 80%;
+  /* border: 1px solid red */
 }
-
-.form-container {
-  margin-top: 30px;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 80%;
-  height: 70%;
-}
-
-.name-div {
-  height: 70px;
-  color: var(--font-color);
-  font-size: 20px;
-  /* font-weight: 600; */
+.right-container .set {
   display: flex;
   justify-content: space-between;
-  /* margin: 10px 0; */
-  /* border: 1px solid red; */
-  font-family: var(--font-family);
+  margin: 10px 0;
+  width: 90%;
+  /* border: 1px solid red */
 }
 
-.pet-name-div {
-  /* border: 1px solid red; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-}
-
-.photo-div {
-  /* border: 1px solid red; */
-  display: flex;
-  align-items:flex-end;
-  justify-content: space-evenly;
-  width: 50%;
-}
-
-.span-icon {
-  /* border: 1px solid red; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: #c2c2c2;
-  /* border: none;
-  border-radius: 50%;
-  height: 38px;
-  margin-right: 10px;
-  outline: none; */
-  width: 38px;
-  height: 38px;
-}
-
-.breed-div {
-  /* border: 1px solid red; */
-  display: flex;
-  height: 70px;
-  font-family: var(--font-family);
-
-}
-
-.pet-breed-div {
-  /* border: 1px solid red; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-}
-
-.birth-div {
-  /* border: 1px solid red; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-
-}
-
-.gender-div {
-  border: 1px solid red;
-  display: flex;
-}
-
-.pet-gender-div {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-family);
-  width: 50%;
-}
-
-.radio-gender-container {
-  border: 1px solid red;
+.container-button {
   display: flex;
   justify-content: space-between;
-  align-content: center;
-  width: 100%;
-  background: #fff;
-  /* border: 1px solid var(--form-border-color); */
-  border-radius: 4px;
-  /* display: inline-block; */
-  padding: 0px 5px;
-
-  
+  width: 90%;
+  /* border: 1px solid red; */
 }
-
-.input-gender {
-  border: 1px solid black;
-  width: 50%;
-  height: 80%;
-}
-
-.input {
-  /* background-color: #171A2B; */
-  width: 200px;
-}
-
-input {
-  border: 1px solid var(--form-border-color);
-  color: var(--font-color);
-  font-family: var(--font-family);
+.right-container input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   height: 38px;
   line-height: 38px;
   padding-left: 5px;
-  
 }
-  
-footer {
-  display: flex;
-  justify-content: flex-end;
+.right-container input,
+.right-container label {
+  color: rgba(0, 0, 0, 0.8);
+}
+.right-container header {
+  padding: 40px;
+}
+.right-container label,
+.right-container input,
+.right-container .pets-photo {
+  width: 176px;
+}
+.right-container .pets-photo {
   align-items: center;
-  background: #fff;
-  padding: 0px 30px;
-  height: 80px;
-  width: 100%;
+  display: grid;
+  grid-template-areas: ". .";
+}
+.right-container .pets-photo button {
+  border: none;
+  border-radius: 50%;
+  height: 38px;
+  margin-right: 10px;
+  outline: none;
+  width: 38px;
+}
+.right-container .pets-photo button i {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
 }
 
-.send-button {
-  border: 1px solid rgba(0,0,0,.2);
+.pets-weight {
+  width: 90%;
+}
+.right-container .radio-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* border: 1px solid red */
+}
+.right-container footer {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px;
+  width: 100%;
+}
+.right-container footer button {
+  border: 1px solid rgba(0, 0, 0, 0.2);
   height: 38px;
   line-height: 38px;
   width: 100px;
   border-radius: 19px;
   font-family: var(--font-family);
-  background: var(--secondary-bg-color);
-  transition: .2s all ease-in-out;
+  /* border: 1px solid red; */
 }
-
-.send-button:hover {
-  background: #171A2B;
+.right-container footer #back {
+  background: #fff;
+  transition: 0.2s all ease-in-out;
+}
+.right-container footer #back:hover {
+  background: #171a2b;
   color: white;
 }
-
-
-/* .pets-name, .pets-breed, .pets-birthday, .pets-gender, .pets-spayed-neutered, .pets-weight {
-  & label {
-    display: block;
-    margin-bottom: 5px;
-  }
-} */
-
-/* .radio-container {
-    background: #fff;
-    border: 1px solid $form-border-color;
-    border-radius: 4px;
-    display: inline-block;
-    padding: 5px;
-} */
-/* .radio-container label {
-    background: transparent;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    display: inline-block;
-    height: 26px;
-    line-height: 26px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    transition: .2s all ease-in-out;
-    width: 80px;
-} */
-/* .radio-container input[type="radio"] {
-    display: none;
+.right-container footer #next {
+  background: #807182;
+  border: 1px solid transparent;
+  color: #fff;
 }
-.radio-container input[type="radio"]:checked + label {
-    background: $primary-bg-color;
-    border: 1px solid $form-border-color;
-} */
+.right-container footer #next:hover {
+  background: #171a2b;
+}
+
+.pets-name label,
+.pets-breed label,
+.pets-birthday label,
+.pets-gender label,
+.pets-spayed-neutered label,
+.pets-weight label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.radio-container {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+  padding: 5px;
+}
+
+.radio-container label {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 15px;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: 0.2s all ease-in-out;
+  width: 80px;
+  /* border: 1px solid red */
+}
+
+.radio-container input[type=radio] {
+  display: none;
+}
+
+.radio-container input[type=radio]:checked + label {
+  background: #f7b1ab;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
